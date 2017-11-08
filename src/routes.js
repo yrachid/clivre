@@ -1,15 +1,29 @@
-const courses =
+const home =
   (Course) =>
-    (request, response) => Course
+    (_, response) => Course
       .find({})
       .exec()
-      .then(courses => response
-        .json(courses))
+      .then(courses => {
+        console.log(courses)
+        response
+          .render('home', {courses})
+      })
       .catch(error => response
         .status(500)
         .json({error: error.message}))
 
-const home =
-  () => (_, response) => response.sendStatus(200)
+const course =
+  (Course) =>
+    (request, response) => Course
+      .findOne({_id: request.params.id})
+      .exec()
+    .then(course => {
+      console.log(course)
+      response
+        .render('course', course)
+    })
+    .catch(error => response
+      .status(500)
+      .json({error: error.message}))
 
-module.exports = {home, courses}
+module.exports = {home, course}

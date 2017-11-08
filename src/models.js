@@ -28,7 +28,6 @@ const Course = new Schema({
   duration: String,
   publication: Date,
   content: {
-    totalLessons: Number,
     lessons: [Lesson],
   },
   language: String,

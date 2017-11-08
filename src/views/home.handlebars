@@ -1,0 +1,17 @@
+<h1 class="title"> ConhecimentoLivre :: Cursos </h1>
+<div class="columns is-multiline">
+  {{#each courses}}
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">{{title}}</p>
+          <p class="subtitle">{{author.name}}</p>
+          <p>{{content.lessons.length}} aula(s)</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-footer-item" href="/course/{{id}}">Ver Aulas</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,16 @@
+<h1 class="title">{{title}}</h1>
+<h3 class="subtitle">{{author.name}}</h3>
+<div class="columns is-multiline">
+  {{#each content.lessons}}
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">{{title}}</p>
+          <p class="subtitle">{{preview}}</p>
+          <p class="subtitle">{{url}}</p>
+          <p>{{views}} visualizações</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
