@@ -1,16 +1,21 @@
 Conhecimento Livre
 
   Home:
-    -> Listagem de todos os cursos
+    -- Listagem de todos os cursos
 
   Course:
-    -> Página de detalhes do curso
-      -> Lista de lições
+    -- Página de detalhes do curso
+      -- Lista de lições
       -> Exibir lição atual
         -> Atualizar contagem de visualizações
       -> Próxima lição
       -> Lição anterior
 
   Autor:
+    -> Listagem de todos os autores
+      -> Link na navbar para listagem de autores
     -> Página de perfil do autor
       -> Mostrar todos os cursos
+        -> Link para o curso
+        -> Mostrar lista de aulas de cada curso
+          -> Link individual para cada aula

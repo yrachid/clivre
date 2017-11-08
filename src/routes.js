@@ -3,11 +3,8 @@ const home =
     (_, response) => Course
       .find({})
       .exec()
-      .then(courses => {
-        console.log(courses)
-        response
-          .render('home', {courses})
-      })
+      .then(courses => response
+          .render('home', {courses}))
       .catch(error => response
         .status(500)
         .json({error: error.message}))
@@ -17,13 +14,21 @@ const course =
     (request, response) => Course
       .findOne({_id: request.params.id})
       .exec()
-    .then(course => {
-      console.log(course)
-      response
-        .render('course', course)
-    })
-    .catch(error => response
-      .status(500)
-      .json({error: error.message}))
+      .then(course =>response
+        .render('course', course))
+      .catch(error => response
+        .status(500)
+        .json({error: error.message}))
 
-module.exports = {home, course}
+const author =
+  (Course) =>
+    (request, response) => Course
+      .find({'author._id': request.params.id})
+      .exec()
+      .then(courses => ({author: courses[0].author, courses}))
+      .then(context => response.render('author', context))
+      .catch(error => response
+        .status(500)
+        .json({error: error.message}))
+
+module.exports = {home, course, author}

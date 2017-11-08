@@ -1,0 +1,31 @@
+<h1 class="title">{{author.name}}</h1>
+<h3 class="subtitle">{{courses.length}} curso(s)</h3>
+<div class="columns is-multiline">
+  {{#each courses}}
+    <div class="column is-4">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">{{title}}</p>
+          <p class="subtitle">{{duration}}</p>
+          <p>
+            <span class="tag is-primary">
+              {{language}}
+            </span>
+          </p>
+          <p class="subtitle">Aulas: </p>
+          <ul>
+            {{#each content.lessons}}
+              <li>{{title}}</li>
+            {{/each}}
+          </ul>
+
+        </div>
+        <div class="card-footer">
+          <div class="card-footer-item">
+            <a href="/course/{{id}}" class="subtitle">Ver Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

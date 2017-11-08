@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^4.13.0"
+    "mongoose": "^4.13.0",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "jest": "^21.2.1"
