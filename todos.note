@@ -1,0 +1,16 @@
+Conhecimento Livre
+
+  Home:
+    -> Listagem de todos os cursos
+
+  Course:
+    -> Página de detalhes do curso
+      -> Lista de lições
+      -> Exibir lição atual
+        -> Atualizar contagem de visualizações
+      -> Próxima lição
+      -> Lição anterior
+
+  Autor:
+    -> Página de perfil do autor
+      -> Mostrar todos os cursos

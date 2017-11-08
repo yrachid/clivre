@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.16.2",
     "mongoose": "^4.13.0"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
   }
 }

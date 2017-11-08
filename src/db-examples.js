@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const course = require('./models/course')
+const course = require('./models')
 
 mongoose.Promise = Promise
 

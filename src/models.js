@@ -10,6 +10,7 @@ const Author = new Schema({
 })
 
 const Lesson = new Schema({
+  order: Number,
   class: String,
   title: String,
   type: String,
